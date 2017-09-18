@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-
+import { connect } from 'react-redux';
 
 class LibraryList extends Component {
     constructor(props) {
@@ -11,4 +11,4 @@ class LibraryList extends Component {
     }
 }
 
-export default LibraryList;
+export default connect()(LibraryList);
