@@ -14,9 +14,11 @@ class ListItem extends Component {
         const { titleStyle } = styles;
 
         return (
-            <CardSection>
-                <Text style={titleStyle}>{this.props.library.title}</Text>
-            </CardSection>
+            <TouchableWithoutFeedback>
+                <CardSection>
+                    <Text style={titleStyle}>{this.props.library.title}</Text>
+                </CardSection>
+            </TouchableWithoutFeedback>
         );
     }
 }
