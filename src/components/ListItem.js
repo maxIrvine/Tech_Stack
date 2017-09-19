@@ -1,5 +1,10 @@
 import React, { Component } from 'react';
-import { Text, TouchableWithoutFeedback, View } from 'react-native';
+import { 
+    Text, 
+    TouchableWithoutFeedback, 
+    View,
+    LayoutAnimation
+} from 'react-native';
 import { connect } from 'react-redux';
 import { CardSection } from './common';
 import * as actions from '../actions';
@@ -8,6 +13,10 @@ import * as actions from '../actions';
 class ListItem extends Component {
     constructor(props) {
         super(props);
+    }
+
+    componentWillUpdate() {
+        LayoutAnimation.spring();
     }
 
     renderDescription() {
